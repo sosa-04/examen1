@@ -11,11 +11,20 @@ class TipoasientoController extends Controller
     //
 
     public function index(){
-        $tipos = TipoAsiento::all();
+        $tipos = TipoAsiento::where('estado','A')->get();
         return view('tiposAsientos', compact('tipos'));
     }
 
     public function agregar(){
+        return view('agregarTipoAsiento');
+    }
+
+    public function guardar(request $request){
+        $nvotipo= new TipoAsiento();
+
+        $nvotipo->descripcion= $request->input('descripcion');
+        $nvotipo->precio= $request->input('precio');
+        $nvotipo->estado= $request->input('estado');
         return view('agregarTipoAsiento');
     }
 }

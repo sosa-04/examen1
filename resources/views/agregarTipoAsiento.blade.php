@@ -14,18 +14,18 @@
             <div class="col-md-6">
                 <h2>Crear Tipo Asiento</h2>
                 <br>
-                <form >
+                <form action="{{route('')}}" method="POST" >
                     <div class="form-group">
                         <label for="color">Descripcion:</label>
-                        <input type="text" class="form-control" />
+                        <input type="text" class="form-control" name="descripcion" />
                     </div>
                     <div class="form-group">
                         <label for="metros">Precio</label>
-                        <input type="text"class="form-control"/>
+                        <input type="text"class="form-control" name="precio"/>
                     </div>
                     <div class="form-group">
                         <label for="tipoPropiedad">Estado:</label>
-                        <input type="text" class="form-control"/>
+                        <input type="text" class="form-control" name="estado"/>
                     </div>
 
                     

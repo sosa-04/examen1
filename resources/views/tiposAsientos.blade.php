@@ -29,10 +29,10 @@
 
             @foreach ($tipos as $tipo)
             <tr>
-                <td></td>
-                <td>Business</td>
-                <td>600</td>
-                <td>A</td>
+                <td>{{$tipo->idTipoAsiento}}</td>
+                <td>{{$tipo->descripcion}}</td>
+                <td>{{$tipo->precio}}</td>
+                <td>{{$tipo->estado}}</td>
                 <td>
                     <a>Editar</a>
                 </td>
